@@ -4,21 +4,32 @@ import java.awt.Graphics;
 
 import com.hoffrogge.lehreinheit04.Quadrat;
 
-/* Zeichenfläche mit einer Größe von 800 x 800 Pixeln
- * 
- */
-
 public class Zeichenflaeche extends Quadrat {
 
 	@Override
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
+		/*
+		 * Rechteck erstesRechteck = new Rechteck(0, 0);
+		 * erstesRechteck.zeichnen(graphics);
+		 * 
+		 * Rechteck zweitesRechteck = new Rechteck(100, 0);
+		 * zweitesRechteck.zeichnen(graphics);
+		 * 
+		 * Rechteck drittesRechteck = new Rechteck(100, 100);
+		 * drittesRechteck.zeichnen(graphics);
+		 * 
+		 * Rechteck viertesRechteck = new Rechteck(200, 0);
+		 * viertesRechteck.zeichnen(graphics);
+		 */
+		TetrominoT tetrominoT = new TetrominoT();
+		tetrominoT.zeichnen(graphics);
 
-		Rechteck erstesRechteck = new Rechteck(0, 0);
-		erstesRechteck.zeichnen(graphics);
+		TetrominoL tetrominoL = new TetrominoL();
+		tetrominoL.zeichnen(graphics);
 
-		Rechteck zweitesRechteck = new Rechteck(100, 0);
-		zweitesRechteck.zeichnen(graphics);
+		TetrominoI tetrominoI = new TetrominoI();
+		tetrominoI.zeichnen(graphics);
+
 	}
-
 }

@@ -16,65 +16,67 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class Zeichenbrett extends JPanel {
 
-    private transient BufferedImage           bild;
+	private transient BufferedImage bild;
 
-    private transient List<GeometrischeFigur> zeichenbareObjekte;
+	private transient List<GeometrischeFigur> zeichenbareObjekte;
 
-    public Zeichenbrett() {
+	private JFrame fenster;
 
-        setBorder(BorderFactory.createRaisedBevelBorder());
+	public Zeichenbrett() {
 
-        bild = new BufferedImage(800, 800, BufferedImage.TYPE_INT_RGB);
-        Graphics g2d = bild.getGraphics();
-        g2d.setColor(Color.WHITE);
-        g2d.fillRect(0, 0, bild.getWidth(), bild.getHeight());
+		setBorder(BorderFactory.createRaisedBevelBorder());
 
-        g2d.dispose();
+		bild = new BufferedImage(800, 800, BufferedImage.TYPE_INT_RGB);
+		Graphics g2d = bild.getGraphics();
+		g2d.setColor(Color.WHITE);
+		g2d.fillRect(0, 0, bild.getWidth(), bild.getHeight());
 
-        zeichenbareObjekte = new ArrayList<>();
+		g2d.dispose();
 
-        JFrame fenster = new JFrame();
-        fenster.setTitle("Zeichenbrett 800x800");
+		zeichenbareObjekte = new ArrayList<>();
 
-        Container fensterInhalt = fenster.getContentPane();
-        fensterInhalt.setLayout(new BorderLayout());
+		fenster = new JFrame();
+		fenster.setTitle("Zeichenbrett 800x800");
 
-        fensterInhalt.add(this, BorderLayout.CENTER);
-        fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container fensterInhalt = fenster.getContentPane();
+		fensterInhalt.setLayout(new BorderLayout());
 
-        fenster.setSize(new Dimension(822, 844));
+		fensterInhalt.add(this, BorderLayout.CENTER);
+		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        /*
-         * Kleiner Trick, um das Fenster in der Mitte des Bildschirms anzuzeigen
-         */
-        fenster.setLocationRelativeTo(null);
+		fenster.setSize(new Dimension(822, 844));
 
-        fenster.setVisible(true);
-    }
+		/*
+		 * Kleiner Trick, um das Fenster in der Mitte des Bildschirms anzuzeigen
+		 */
+		fenster.setLocationRelativeTo(null);
+	}
 
-    @Override
-    protected void paintComponent(Graphics g) {
+	@Override
+	protected void paintComponent(Graphics g) {
 
-        super.paintComponent(g);
+		super.paintComponent(g);
 
-        g.drawImage(bild, 2, 2, this);
-    }
+		g.drawImage(bild, 2, 2, this);
+	}
 
-    public void zeichneAlleZeichenbarenObjekte() {
+	public void zeichneAlleZeichenbarenObjekte() {
 
-        Graphics g2d = bild.getGraphics();
+		Graphics g2d = bild.getGraphics();
 
-        for (GeometrischeFigur zeichenbaresObjekt : zeichenbareObjekte)
-            zeichenbaresObjekt.zeichnen(g2d);
+		for (GeometrischeFigur zeichenbaresObjekt : zeichenbareObjekte)
+			zeichenbaresObjekt.zeichnen(g2d);
 
-        g2d.dispose();
-    }
+		g2d.dispose();
 
-    public void fuegeZeichenbaresObjektHinzu(GeometrischeFigur zeichenbaresObjekt) {
-        zeichenbareObjekte.add(zeichenbaresObjekt);
-    }
+		fenster.setVisible(true);
+	}
 
-    public void entferneZeichenbaresObjekt(GeometrischeFigur zeichenbaresObjekt) {
-        zeichenbareObjekte.remove(zeichenbaresObjekt);
-    }
+	public void fuegeZeichenbaresObjektHinzu(GeometrischeFigur zeichenbaresObjekt) {
+		zeichenbareObjekte.add(zeichenbaresObjekt);
+	}
+
+	public void entferneZeichenbaresObjekt(GeometrischeFigur zeichenbaresObjekt) {
+		zeichenbareObjekte.remove(zeichenbaresObjekt);
+	}
 }
