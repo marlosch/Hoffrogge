@@ -9,19 +9,7 @@ public class Zeichenflaeche extends Quadrat {
 	@Override
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
-		/*
-		 * Rechteck erstesRechteck = new Rechteck(0, 0);
-		 * erstesRechteck.zeichnen(graphics);
-		 * 
-		 * Rechteck zweitesRechteck = new Rechteck(100, 0);
-		 * zweitesRechteck.zeichnen(graphics);
-		 * 
-		 * Rechteck drittesRechteck = new Rechteck(100, 100);
-		 * drittesRechteck.zeichnen(graphics);
-		 * 
-		 * Rechteck viertesRechteck = new Rechteck(200, 0);
-		 * viertesRechteck.zeichnen(graphics);
-		 */
+
 		TetrominoT tetrominoT = new TetrominoT();
 		tetrominoT.zeichnen(graphics);
 
@@ -31,5 +19,16 @@ public class Zeichenflaeche extends Quadrat {
 		TetrominoI tetrominoI = new TetrominoI();
 		tetrominoI.zeichnen(graphics);
 
+		TetrominoQ tetrominoQ = new TetrominoQ();
+		tetrominoQ.zeichnen(graphics);
+
+		TetrominoZ tetrominoZ = new TetrominoZ();
+		tetrominoZ.zeichnen(graphics);
+
+		TetrominoLL tetrominoLL = new TetrominoLL();
+		tetrominoLL.zeichnen(graphics);
+
+		TetrominoZZ tetrominoZZ = new TetrominoZZ();
+		tetrominoZZ.zeichnen(graphics);
 	}
 }
