@@ -6,18 +6,26 @@ import com.hoffrogge.lehreinheit01.Rechteck;
 
 public class TetrominoLanger extends AllgemeinerTetromino {
 
+	private int koordinateY;
+	private int koordinateX;
+
+	public TetrominoLanger(int x, int y) {
+		koordinateX = x;
+		koordinateY = y;
+	}
+
 	public void zeichnen(Graphics graphics) {
 
-		Rechteck erstesRechteck = new Rechteck(400, 50);
+		Rechteck erstesRechteck = new Rechteck(koordinateX, koordinateY);
 		erstesRechteck.zeichnen(graphics);
 
-		Rechteck zweitesRechteck = new Rechteck(400, 100);
+		Rechteck zweitesRechteck = new Rechteck(koordinateX, koordinateY + 50);
 		zweitesRechteck.zeichnen(graphics);
 
-		Rechteck drittesRechteck = new Rechteck(400, 150);
+		Rechteck drittesRechteck = new Rechteck(koordinateX, koordinateY + 100);
 		drittesRechteck.zeichnen(graphics);
 
-		Rechteck viertesRechteck = new Rechteck(400, 200);
+		Rechteck viertesRechteck = new Rechteck(koordinateX, koordinateY + 150);
 		viertesRechteck.zeichnen(graphics);
 	}
 }

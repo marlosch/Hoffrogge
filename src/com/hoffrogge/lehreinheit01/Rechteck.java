@@ -7,6 +7,12 @@ public class Rechteck {
 	private int xKoordinate;
 	private int yKoordinate;
 
+	private int kantenlänge = 50;
+
+	public int getKantenlaenge() {
+		return kantenlänge;
+	}
+
 	public Rechteck(int xKoordinate, int yKoordinate) {
 		super();
 		this.xKoordinate = xKoordinate;
