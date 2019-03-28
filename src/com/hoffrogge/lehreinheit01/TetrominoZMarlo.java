@@ -7,25 +7,23 @@ import com.hoffrogge.lehreinheit04.GeometrischeFigur;
 import com.hoffrogge.lehreinheit04.Punkt;
 import com.hoffrogge.lehreinheit04.Quadrat;
 
-public class TetrominoI extends Quadrat implements GeometrischeFigur {
+public class TetrominoZMarlo extends Quadrat implements GeometrischeFigur {
 
-	private Object mittelpunkt;
-	private int d;
-	private Farbe farbe;
+	private Punkt mittelpunkt;
 
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
 
-		Rechteck erstesRechteck = new Rechteck(400, 50);
+		Rechteck erstesRechteck = new Rechteck(650, 50);
 		erstesRechteck.zeichnen(graphics);
 
-		Rechteck zweitesRechteck = new Rechteck(400, 100);
+		Rechteck zweitesRechteck = new Rechteck(650, 100);
 		zweitesRechteck.zeichnen(graphics);
 
-		Rechteck drittesRechteck = new Rechteck(400, 150);
+		Rechteck drittesRechteck = new Rechteck(700, 100);
 		drittesRechteck.zeichnen(graphics);
 
-		Rechteck viertesRechteck = new Rechteck(400, 200);
+		Rechteck viertesRechteck = new Rechteck(700, 150);
 		viertesRechteck.zeichnen(graphics);
 	}
 
@@ -42,19 +40,19 @@ public class TetrominoI extends Quadrat implements GeometrischeFigur {
 
 	@Override
 	public void setDurchmesser(int d) {
-		this.d = d;
+		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public Farbe getLinienFarbe() {
-		return farbe;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void setLinienFarbe(Farbe farbe) {
-		this.farbe = farbe;
+		// TODO Auto-generated method stub
 
 	}
-
 }

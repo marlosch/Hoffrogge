@@ -7,23 +7,23 @@ import com.hoffrogge.lehreinheit04.GeometrischeFigur;
 import com.hoffrogge.lehreinheit04.Punkt;
 import com.hoffrogge.lehreinheit04.Quadrat;
 
-public class TetrominoZZ extends Quadrat implements GeometrischeFigur {
+public class TetrominoLLMarlo extends Quadrat implements GeometrischeFigur {
 
 	private Punkt mittelpunkt;
 
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
 
-		Rechteck erstesRechteck = new Rechteck(700, 300);
+		Rechteck erstesRechteck = new Rechteck(300, 300);
 		erstesRechteck.zeichnen(graphics);
 
-		Rechteck zweitesRechteck = new Rechteck(650, 350);
+		Rechteck zweitesRechteck = new Rechteck(300, 350);
 		zweitesRechteck.zeichnen(graphics);
 
-		Rechteck drittesRechteck = new Rechteck(700, 350);
+		Rechteck drittesRechteck = new Rechteck(300, 400);
 		drittesRechteck.zeichnen(graphics);
 
-		Rechteck viertesRechteck = new Rechteck(650, 400);
+		Rechteck viertesRechteck = new Rechteck(250, 400);
 		viertesRechteck.zeichnen(graphics);
 	}
 
@@ -55,4 +55,5 @@ public class TetrominoZZ extends Quadrat implements GeometrischeFigur {
 		// TODO Auto-generated method stub
 
 	}
+
 }

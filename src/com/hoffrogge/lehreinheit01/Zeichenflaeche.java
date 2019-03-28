@@ -3,6 +3,14 @@ package com.hoffrogge.lehreinheit01;
 import java.awt.Graphics;
 
 import com.hoffrogge.lehreinheit04.Quadrat;
+import com.hoffrogge.tetris.TetrominoBlock;
+import com.hoffrogge.tetris.TetrominoL;
+import com.hoffrogge.tetris.TetrominoLanger;
+import com.hoffrogge.tetris.TetrominoSpielstein;
+import com.hoffrogge.tetris.TetrominoT;
+import com.hoffrogge.tetris.TetrominoUmgedrehtesL;
+import com.hoffrogge.tetris.TetrominoUmgedrehtesZ;
+import com.hoffrogge.tetris.TetrominoZ;
 
 public class Zeichenflaeche extends Quadrat {
 
@@ -10,25 +18,25 @@ public class Zeichenflaeche extends Quadrat {
 	public void zeichnen(Graphics graphics) {
 		super.zeichnen(graphics);
 
-		TetrominoT tetrominoT = new TetrominoT();
+		TetrominoSpielstein tetrominoT = new TetrominoBlock();
 		tetrominoT.zeichnen(graphics);
 
-		TetrominoL tetrominoL = new TetrominoL();
+		TetrominoSpielstein tetrominoL = new TetrominoL();
 		tetrominoL.zeichnen(graphics);
 
-		TetrominoI tetrominoI = new TetrominoI();
+		TetrominoSpielstein tetrominoI = new TetrominoLanger();
 		tetrominoI.zeichnen(graphics);
 
-		TetrominoQ tetrominoQ = new TetrominoQ();
+		TetrominoSpielstein tetrominoQ = new TetrominoT();
 		tetrominoQ.zeichnen(graphics);
 
-		TetrominoZ tetrominoZ = new TetrominoZ();
+		TetrominoSpielstein tetrominoZ = new TetrominoZ();
 		tetrominoZ.zeichnen(graphics);
 
-		TetrominoLL tetrominoLL = new TetrominoLL();
+		TetrominoSpielstein tetrominoLL = new TetrominoUmgedrehtesL();
 		tetrominoLL.zeichnen(graphics);
 
-		TetrominoZZ tetrominoZZ = new TetrominoZZ();
+		TetrominoSpielstein tetrominoZZ = new TetrominoUmgedrehtesZ();
 		tetrominoZZ.zeichnen(graphics);
 	}
 }

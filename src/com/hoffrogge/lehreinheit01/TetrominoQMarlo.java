@@ -7,7 +7,7 @@ import com.hoffrogge.lehreinheit04.GeometrischeFigur;
 import com.hoffrogge.lehreinheit04.Punkt;
 import com.hoffrogge.lehreinheit04.Quadrat;
 
-public class TetrominoQ extends Quadrat implements GeometrischeFigur {
+public class TetrominoQMarlo extends Quadrat implements GeometrischeFigur {
 
 	private Punkt mittelpunkt;
 
