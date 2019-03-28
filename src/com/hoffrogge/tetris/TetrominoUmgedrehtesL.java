@@ -16,7 +16,7 @@ public class TetrominoUmgedrehtesL extends AllgemeinerTetromino {
 
 	public void zeichnen(Graphics graphics) {
 
-		Rechteck erstesRechteck = new Rechteck(koordinateX, koordinateY + 2 * erstesRechteck.getKantenlaenge());
+		Rechteck erstesRechteck = new Rechteck(koordinateX, koordinateY + 2 * Rechteck.getKantenlaenge());
 		erstesRechteck.zeichnen(graphics);
 
 		Rechteck zweitesRechteck = new Rechteck(koordinateX + 50, koordinateY + 50);

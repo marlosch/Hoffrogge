@@ -19,14 +19,14 @@ public class TetrominoUmgedrehtesZ extends AllgemeinerTetromino {
 		Rechteck erstesRechteck = new Rechteck(koordinateX, koordinateY);
 		erstesRechteck.zeichnen(graphics);
 
-		Rechteck zweitesRechteck = new Rechteck(koordinateX, koordinateY + erstesRechteck.getKantenlaenge());
+		Rechteck zweitesRechteck = new Rechteck(koordinateX, koordinateY + Rechteck.getKantenlaenge());
 		zweitesRechteck.zeichnen(graphics);
 
-		Rechteck drittesRechteck = new Rechteck(koordinateX + erstesRechteck.getKantenlaenge(),
-				koordinateY + erstesRechteck.getKantenlaenge());
+		Rechteck drittesRechteck = new Rechteck(koordinateX + Rechteck.getKantenlaenge(),
+				koordinateY + Rechteck.getKantenlaenge());
 		drittesRechteck.zeichnen(graphics);
 
-		Rechteck viertesRechteck = new Rechteck(koordinateX, koordinateY + 2 * erstesRechteck.getKantenlaenge());
+		Rechteck viertesRechteck = new Rechteck(koordinateX, koordinateY + 2 * Rechteck.getKantenlaenge());
 		viertesRechteck.zeichnen(graphics);
 	}
 }

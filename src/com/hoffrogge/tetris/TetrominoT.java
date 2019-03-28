@@ -22,7 +22,7 @@ public class TetrominoT extends AllgemeinerTetromino {
 		Rechteck zweitesRechteck = new Rechteck(koordinateX + 50, koordinateY);
 		zweitesRechteck.zeichnen(graphics);
 
-		Rechteck drittesRechteck = new Rechteck(koordinateX + 100, koordinateY + 50);
+		Rechteck drittesRechteck = new Rechteck(koordinateX + 50, koordinateY + 50);
 		drittesRechteck.zeichnen(graphics);
 
 		Rechteck viertesRechteck = new Rechteck(koordinateX + 100, koordinateY);

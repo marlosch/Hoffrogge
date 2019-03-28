@@ -7,9 +7,9 @@ public class Rechteck {
 	private int xKoordinate;
 	private int yKoordinate;
 
-	private int kantenlänge = 50;
+	private static int kantenlänge = 50;
 
-	public int getKantenlaenge() {
+	public static int getKantenlaenge() {
 		return kantenlänge;
 	}
 
